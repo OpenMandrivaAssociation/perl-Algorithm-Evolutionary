@@ -13,6 +13,16 @@ Source:     http://www.cpan.org/modules/by-module/Algorithm/%{realname}-%{versio
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel
+BuildRequires: perl(Algorithm::Permute)
+BuildRequires: perl(Bit::Vector)
+BuildRequires: perl(Clone::Fast)
+BuildRequires: perl(Math::Random)
+BuildRequires: perl(Object::Array)
+BuildRequires: perl(String::Random)
+BuildRequires: perl(Test::Pod)
+BuildRequires: perl(Tree::DAG_Node)
+BuildRequires: perl(XML::Parser::Style::EasyTree)
+BuildRequires: perl(YAML)
 
 
 BuildArch: noarch
