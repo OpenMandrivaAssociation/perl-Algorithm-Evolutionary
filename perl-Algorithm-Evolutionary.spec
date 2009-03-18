@@ -1,6 +1,5 @@
-
 %define realname   Algorithm-Evolutionary
-%define version    0.63
+%define version    0.64
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
@@ -11,8 +10,6 @@ Group:      Development/Perl
 Summary:    N-point crossover
 Source:     http://www.cpan.org/modules/by-module/Algorithm/%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel
 BuildRequires: perl(Algorithm::Permute)
 BuildRequires: perl(Bit::Vector)
 BuildRequires: perl(Clone::Fast)
@@ -23,9 +20,8 @@ BuildRequires: perl(Test::Pod)
 BuildRequires: perl(Tree::DAG_Node)
 BuildRequires: perl(XML::Parser::Style::EasyTree)
 BuildRequires: perl(YAML)
-
-
-BuildArch: noarch
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 'Algorithm::Evolutionary' is a set of classes for doing object-oriented
@@ -64,5 +60,10 @@ rm -rf %buildroot
 %doc Changes LICENSE README
 %{_mandir}/man3/*
 %perl_vendorlib/*
+%{_bindir}/tide_bitstring.pl
+%{_bindir}/tide_float.pl
+%{_mandir}/man1/tide_bitstring.pl.1*
+%{_mandir}/man1/tide_float.pl.1*
+
 
 
