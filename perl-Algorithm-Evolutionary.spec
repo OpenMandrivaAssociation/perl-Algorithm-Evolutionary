@@ -20,6 +20,7 @@ BuildRequires: perl(Test::Pod)
 BuildRequires: perl(Tree::DAG_Node)
 BuildRequires: perl(XML::Parser::Style::EasyTree)
 BuildRequires: perl(YAML)
+BuildRequires: perl(Statistics::Basic)
 BuildArch:  noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
