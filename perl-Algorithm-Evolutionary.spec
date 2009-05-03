@@ -1,5 +1,5 @@
 %define realname   Algorithm-Evolutionary
-%define version    0.64
+%define version    0.67
 %define release    %mkrel 1
 
 Name:       perl-%{realname}
@@ -63,8 +63,10 @@ rm -rf %buildroot
 %perl_vendorlib/*
 %{_bindir}/tide_bitstring.pl
 %{_bindir}/tide_float.pl
+%{_bindir}/canonical-genetic-algorithm.pl
 %{_mandir}/man1/tide_bitstring.pl.1*
 %{_mandir}/man1/tide_float.pl.1*
+%{_mandir}/man1/canonical-genetic-algorithm.pl.1*
 
 
 
