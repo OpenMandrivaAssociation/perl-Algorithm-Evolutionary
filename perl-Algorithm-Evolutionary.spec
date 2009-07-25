@@ -1,15 +1,16 @@
-%define realname   Algorithm-Evolutionary
-%define version    0.67
-%define release    %mkrel 2
+%define upstream_name    Algorithm-Evolutionary
+%define upstream_version 0.69
 
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
-License:    GPL or Artistic
-Group:      Development/Perl
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:    N-point crossover
-Source:     http://www.cpan.org/modules/by-module/Algorithm/%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
+License:    GPL+ or Artistic
+Group:      Development/Perl
+Url:        http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires: perl(Algorithm::Permute)
 BuildRequires: perl(Bit::Vector)
 BuildRequires: perl(Clone::Fast)
@@ -22,7 +23,7 @@ BuildRequires: perl(XML::Parser::Style::EasyTree)
 BuildRequires: perl(YAML)
 BuildRequires: perl(Statistics::Basic)
 BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 'Algorithm::Evolutionary' is a set of classes for doing object-oriented
@@ -40,7 +41,7 @@ The algorithm allows to create simple evolutionary algorithms, as well as
 more complex ones, that interface with databases or with the web. 
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -67,6 +68,4 @@ rm -rf %buildroot
 %{_mandir}/man1/tide_bitstring.pl.1*
 %{_mandir}/man1/tide_float.pl.1*
 %{_mandir}/man1/canonical-genetic-algorithm.pl.1*
-
-
 
