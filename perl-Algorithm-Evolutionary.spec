@@ -1,5 +1,5 @@
 %define upstream_name    Algorithm-Evolutionary
-%define upstream_version 0.69
+%define upstream_version 0.70
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -78,4 +78,3 @@ rm -rf %buildroot
 %{_mandir}/man1/tide_bitstring.pl.1*
 %{_mandir}/man1/tide_float.pl.1*
 %{_mandir}/man1/canonical-genetic-algorithm.pl.1*
-
