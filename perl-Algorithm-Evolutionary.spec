@@ -1,9 +1,9 @@
 %define upstream_name    Algorithm-Evolutionary
-%define upstream_version 0.70
+%define upstream_version 0.71
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    N-point crossover
 License:    GPL+ or Artistic
@@ -71,8 +71,10 @@ rm -rf %buildroot
 %files
 %defattr(-,root,root)
 %doc Changes LICENSE README
+%{_mandir}/man1/*
 %{_mandir}/man3/*
 %perl_vendorlib/*
+%{_bindir}/rectangle-coverage.pl
 %{_bindir}/tide_bitstring.pl
 %{_bindir}/tide_float.pl
 %{_bindir}/canonical-genetic-algorithm.pl
