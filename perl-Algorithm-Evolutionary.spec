@@ -1,15 +1,15 @@
 %define upstream_name    Algorithm-Evolutionary
-%define upstream_version 0.73
+%define upstream_version 0.762
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:    N-point crossover
 License:    GPL+ or Artistic
 Group:      Development/Perl
 Url:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Algorithm/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:    http://www.cpan.org/modules/by-module/Algorithm/%{upstream_name}-0.76_2.tar.gz
 
 BuildRequires: perl(Algorithm::Permute)
 BuildRequires: perl(B::Deparse)
@@ -52,7 +52,7 @@ The algorithm allows to create simple evolutionary algorithms, as well as
 more complex ones, that interface with databases or with the web. 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-0.76_2
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -78,6 +78,3 @@ rm -rf %buildroot
 %{_bindir}/tide_bitstring.pl
 %{_bindir}/tide_float.pl
 %{_bindir}/canonical-genetic-algorithm.pl
-%{_mandir}/man1/tide_bitstring.pl.1*
-%{_mandir}/man1/tide_float.pl.1*
-%{_mandir}/man1/canonical-genetic-algorithm.pl.1*
