@@ -14,6 +14,7 @@ Source0:    http://www.cpan.org/modules/by-module/Algorithm/%{upstream_name}-0.7
 BuildRequires: perl(Algorithm::Permute)
 BuildRequires: perl(B::Deparse)
 BuildRequires: perl(Bit::Vector)
+BuildRequires: perl(Clone)
 BuildRequires: perl(Clone::Fast)
 BuildRequires: perl(GD::Image)
 BuildRequires: perl(Math::Random)
