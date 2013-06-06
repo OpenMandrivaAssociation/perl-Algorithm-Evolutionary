@@ -1,15 +1,15 @@
 %define upstream_name    Algorithm-Evolutionary
-%define upstream_version 0.762
+%define upstream_version 0.78_2
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	N-point crossover
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Algorithm/%{upstream_name}-0.76_2.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Algorithm/JMERELO/Algorithm-Evolutionary-0.78_2.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Algorithm::Permute)
@@ -53,7 +53,7 @@ The algorithm allows to create simple evolutionary algorithms, as well as
 more complex ones, that interface with databases or with the web. 
 
 %prep
-%setup -q -n %{upstream_name}-0.76_2
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -132,4 +132,5 @@ make test
 
 * Fri Feb 20 2009 cpan2dist 0.63-1mdv
 - initial mdv release, generated with cpan2dist
+
 
