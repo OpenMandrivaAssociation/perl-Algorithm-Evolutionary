@@ -2,7 +2,7 @@
 %define upstream_version 0.78_2
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
+Version:	%perl_convert_version 0.78
 Release:	1
 
 Summary:	N-point crossover
@@ -132,5 +132,6 @@ make test
 
 * Fri Feb 20 2009 cpan2dist 0.63-1mdv
 - initial mdv release, generated with cpan2dist
+
 
 
