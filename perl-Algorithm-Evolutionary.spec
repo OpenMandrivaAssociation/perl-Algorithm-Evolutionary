@@ -8,7 +8,7 @@ Release:	3
 Summary:	N-point crossover
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/Algorithm/JMERELO/Algorithm-Evolutionary-0.78_2.tar.gz
 
 BuildRequires:	perl-devel
